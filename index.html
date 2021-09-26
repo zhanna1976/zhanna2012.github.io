@@ -1,35 +1,61 @@
 <!DOCTYPE html>
 <html>
-<TITLE>Lab_2</TITLE>
+<TITLE>Lab_3</TITLE>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="style.css"> 
-<script src = 'script.js'></script>
 </HEAD>
 <BODY>
- <section>
-     <header>
-        <h1> Форма регістрації</h1>
-     </header>
-     <form name = "register">
-         <p> Ім'я</p>
-         <input type="text" name="name" id = "name">
-         <p>Прізвище</p>
-         <input type="text" name="lname" id = "lname">
-         <p>Логін</p>
-         <input type="text" name="login" id = "login">
-         <p>Пароль</p>
-         <input type="password" name="password" id = "password">
-         <p>Підтвердження пароля</p>
-         <input type="password" name="password" id = "passwordRepeat">
-         <p>E-mail</p>
-         <input type="email" name="email" id = "email">
-         <p>Стать</p>
-         <p><input name="stat" type="radio" value="male" class = "radio"> Чоловіча</p> 
-         <p> <input name="stat" type="radio" value="female" class = "radio"> Жіноча</p>
-         <input type="button" name="button" value="Відправити" class = "button" onclick="Button()">
-
-     </form>
- </section>
+<section class = "row">
+    <section class = "row__item">
+        <h1> Цикл WHILE</h1>
+        <p> Інтервал</p>
+        <p> від</p>
+        <input type="number" id="minValue"/>
+        <p> до</p>
+        <input type="number" id="maxValue"/>
+        <p>Крок табулювання</p>
+        <input type="number" id="step" />
+        <button onclick="WhileCycle()">Табулювати</button>
+        <div class = "results"></div>
+    </section>
+    <section class = "row__item">
+        <h1> Цикл DO-WHILE</h1>
+        <p> Інтервал</p>
+        <p> від</p>
+        <input type="number" id="minValue_2"/>
+        <p> до</p>
+        <input type="number" id="maxValue_2"/>
+        <p>Крок табулювання</p>
+        <input type="number" id="step_2" />
+        <button onclick="DoWhileCycle()">Табулювати</button>
+        <div class = "results_2"></div>
+    </section>
+    <section class = "row__item">
+        <h1> Цикл FOR</h1>
+        <p> Інтервал</p>
+        <p> від</p>
+        <input type="number" id="minValue_3"/>
+        <p> до</p>
+        <input type="number" id="maxValue_3"/>
+        <p>Крок табулювання</p>
+        <input type="number" id="step_3" />
+        <button onclick="ForCycle()">Табулювати</button>
+        <div class = "results_3"></div>
+    </section>
+</section>
+<section class = "canvas__row">
+    <div class = "canvas">
+    <div class = "item__canvas">
+    <h1> Canvas</h1>
+    <p> y = 0.005 (0.2x^2)^2; інтервал : відрізок [3,4], крок 0.1.</p>
+    <button onclick="Canvas()">Побудувати графік</button>
+   </div>
+    <div>
+    <canvas id="canvas"  width="500px" height="500px" style="border: 1px solid black;"></canvas>
+    </div>
+</div>
+</section>
+<script src = 'script.js'></script>
 </BODY>
 </HTML> 

@@ -1,62 +1,65 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital@1&family=Source+Sans+Pro:ital@1&display=swap');
-body {
-	background-image: linear-gradient(to top, rgb(99, 255, 130), rgb(100, 248, 137), rgb(100, 242, 144), rgb(101, 235, 151), rgb(102, 228, 158), rgb(102, 222, 165), rgb(103, 215, 172), rgb(103, 209, 179), rgb(104, 202, 186), rgb(105, 195, 193), rgb(105, 189, 200), rgb(106, 182, 207));	display: flex;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap');
+body{
+  display: block;
+  justify-content: center;
+  flex-wrap: wrap;
 }
-section {
-	margin: 15vh;
-	width: 40vh;
-	max-width: 60vh;
-	min-height: 70vh;
-	background-color: white;
-	padding: 7vh;
-	border-radius: 30px;
-	box-shadow: -1px 8px 37px 10px rgba(34, 60, 80, 0.28);
+.result, .results_2, .results_3{
+  font-size: 18px;
+  margin: 15px;
+  background-color: #626694;
+  border: 5px;
+  color:azure;
+  font-size: 14px;
 }
-header {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+.row {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
-h1, p, input {
-	font-family: 'Merriweather';
+.row__item{
+  background-color: #FFD700;
+  border-radius: 20px;
+  padding: 10px;
+  box-shadow: -2px -2px 25px 8px rgba(34, 60, 80, 0.2);
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
 }
-h1{
-	color: #28972E;
+  
+.canvas{
+  display:flex;
+  background-color: #FFD700;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: -2px -2px 25px 8px rgba(34, 60, 80, 0.2);
+  width: 45%;
 }
-input{
-	background-color: #E6F5EB;
-	border-color: #36A75A;
-	border-radius: 10px;
-	width: 100%;
-	height: 2vh;
-	margin-bottom: 3px;
+.canvas__row{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.radio{
-	width: auto;
+.row__item, .item__canvas p {
+  font-family: 'Montserrat Alternates'
 }
-input:active, :hover, :focus {
-    outline: 0;
-    outline-offset: 0;
+.row__item, .item__canvas h1 {
+  font-family: 'Montserrat Alternates'
 }
-.button {
-	background-color: rgb(106, 182, 207);
-	border-radius: 10px;
-	border-color: rgb(106, 182, 207);
-	width: 20vh;
-	height: 7vh;
-	color: white;
-	text-transform: uppercase;
-	font-size: 2vh;
-	font-family: 'Merriweather';
-	margin-left: 10vh;
-	margin-right: 10vh;
-	transition: 0.5s ease;
+#canvas {
+  border: 1px solid black;
 }
-.button:hover{
-	transform:scale(1.1)
+button {
+  width: 15vh;
+  height: 5vh;
+  font-family: 'Montserrat Alternates';
+  font-size: 14px;
+  background-color: black;
+  color:ghostwhite;
+  border-radius: 15px;
+  margin: 10px;
 }
