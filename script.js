@@ -1,10 +1,13 @@
 function func(x) {
+  return 4*(Math.pow(x,3))*Math.pow((x-1), 0.3);
+}
+function funcForCanvas(x) {
   return 0.005 * Math.pow(0.2 * Math.pow(x,2), 2);
 }
 function WhileCycle() {
-  let xMin = +document.getElementById("minValue").value;
-  let xMax = +document.getElementById("maxValue").value;
-  let step = +document.getElementById("step").value;
+  let xMin = 1*document.getElementById("minValue").value;
+  let xMax = 1*document.getElementById("maxValue").value;
+  let step = 1*document.getElementById("step").value;
   let tabResult = [];
   let x = xMin;
   while (x <= xMax)  {
@@ -21,9 +24,9 @@ function WhileCycle() {
   
 }
 function DoWhileCycle() {
-  let xMin = +document.getElementById("minValue_2").value;
-  let xMax = +document.getElementById("maxValue_2").value;
-  let step = +document.getElementById("step_2").value;
+  let xMin = 1*document.getElementById("minValue_2").value;
+  let xMax = 1*document.getElementById("maxValue_2").value;
+  let step = 1*document.getElementById("step_2").value;
   let tabResult_2 = [];
   let x = xMin;
   do {
@@ -40,9 +43,9 @@ function DoWhileCycle() {
   }
 }
 function ForCycle() {
-  let xMin = +document.getElementById("minValue_3").value;
-  let xMax = +document.getElementById("maxValue_3").value;
-  let step = +document.getElementById("step_3").value;
+  let xMin = 1*document.getElementById("minValue_3").value;
+  let xMax = 1*document.getElementById("maxValue_3").value;
+  let step = 1*document.getElementById("step_3").value;
   let tabResult_3 = [];
   for (let x = xMin; x <= xMax; x += step)  {
     tabResult_3.push(func(x));
@@ -54,26 +57,27 @@ function ForCycle() {
     document.querySelector('.results_3').appendChild(row);
   }
 }
+
 function Canvas() {
-  let xMin = 4;
-  let xMax = 6;
+  let xMin = 3;
+  let xMax = 4;
   let step = 0.1;
   let tabResult_4 = [];
   while (xMin <= xMax)  {
-    tabResult_4.push(func(xMin));
+    tabResult_4.push(funcForCanvas(xMin));
     xMin += step;
   }
   const canvas  = document.getElementById("canvas");
-  const ctx = canvas.getContext("2d");
-  ctx.fillStyle = "red";
+  const context = canvas.getContext("2d");
+  context.fillStyle = "red";
   let x = 4;
-   ctx.translate(canvas.height / 2, canvas.height / 2);
-   ctx.beginPath();
-   ctx.moveTo(0,0);
+  context.translate(canvas.height / 2, canvas.height / 2);
+  context.beginPath();
+  context.moveTo(0,0);
   for(let i = 0; i < tabResult_4.length; i++){
-    ctx.lineTo(x * 50, tabResult_4[i] * -3000);
+    context.lineTo(x * 50, tabResult_4[i] * -3000);
     x += step;
   }
-  ctx.stroke();
-  ctx.closePath();
+  context.stroke();
+  context.closePath();
 }
